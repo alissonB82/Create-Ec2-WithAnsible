@@ -10,9 +10,9 @@ Abaixo siga os passos do video para instalar o aws cli, criar o usuário e logar
 https://www.youtube.com/watch?v=4irgsIK01rQ
 
 __________________________________________________________________________________________________________
-CRIANDO E INSTALANDO AS DEPENDENCIAS 
+CRIANDO E INSTALANDO AS DEPENDÊNCIAS 
 
-Apos isso, instale o Ansible e as dependencias necessarias para poder criar as instancias
+Apos isso, instale o Ansible e as dependências necessarias para criar as instâncias
 
 No terminal linux instale o ansible
     - sudo apt install ansible 
@@ -20,7 +20,7 @@ No terminal linux instale o ansible
 Instale o Python-pip3:
     - sudo apt install python3-pip -y     
 
-Instale algumas dependencias do Python Boto3
+Instale algumas dependências do Python Boto3
     - sudo pip3 install boto boto3
 
 Crie um arquivo de inventario no terminal Linux
@@ -53,30 +53,22 @@ CRIANDO ARQUIVOS PLAYBOOK
 Crei um projeto no VS e crie um arquivo playbook.yml 
  Ex nome do arquivo "create_ec2.yml"
 
-Comando para o arquivo playbook: 
+Comando para o arquivo playbook: https://github.com/alissonB82/Create-Ec2-WithAnsible/blob/main/create_ec2.yml
 
 Certifique-se de subtituir as variaveis do comando playbook
-
-Exemplo
-"keypair: mykeypair (USE A SUA KEYPAIR)
-    instance_type: t2.micro
-    instance_name: test-ec2-instance
-    image: ami-04b70fa74e45c3917
-    region: us-east-1 (VERIQUE A REGIÃO QUE ESTA NA AWS)
-    vpc_id: vpc-02d80133cc4d3bbba (Use a id vpc que anotou)
-    subnet_id: subnet-036d77f40653377b3 (Use a id subnet que anotou)
 
 Apos criar o arquivo playbook execute o comando no terminal linux 
     - ansible-playbook create_ec2.yml (Ou o ansible-playbook NOME DO SEU ARQUIVO PLAYBOOK .yml)
 
-Verifique se sua instancia foi criada atraves do portal da AWS em EC2. 
+Verifique se sua instância foi criada atraves do portal da AWS em EC2. 
 
 Para remover a mesmma instancia EC2, faça o mesmo passo de criar um arquivo playbook 
 
-Comando para o arquivo de excluir a instancia: 
+Comando para o arquivo de excluir a instância: https://github.com/alissonB82/Create-Ec2-WithAnsible/blob/main/remove_ec2.yml
 
 execute o arquivo com o comando 
     - ansible-playbook NOME DO ARQUIVO PARA REMOVER
+
 
 
 
